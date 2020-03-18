@@ -22,6 +22,9 @@ const calculate = () => {
 
       amountTwo.value = (amountOne.value * rate).toFixed(2)
     })
+    .catch(err => {
+      console.log(err)
+    })
 }
 
 // Event listeners
