@@ -4,7 +4,7 @@ const currencyTwo = document.getElementById('currency-two')
 const amountOne = document.getElementById('amount-one')
 const amountTwo = document.getElementById('amount-two')
 
-const rate = document.getElementById('rate')
+const rateElement = document.getElementById('rate')
 const swap = document.getElementById('swap')
 
 // Fetch rates and update the DOM
@@ -18,7 +18,7 @@ const calculate = () => {
     .then(data => {
       const rate = data.rates[currency_two]
 
-      rate.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
+      rateElement.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
 
       amountTwo.value = (amountOne.value * rate).toFixed(2)
     })
